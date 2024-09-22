@@ -1,0 +1,48 @@
+@import "../../variables";
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start; // Align items to the left
+  min-width: 303px; // Minimum width for the logo
+  background-color: $dark-background-color; // Use your variable for background
+  padding: 0px 120px; // Add padding for aesthetics
+.logo {
+  font-size: 64px;
+font-weight: 800;}
+  .wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    .textUc{
+      text-transform: uppercase;
+    }
+    motion.span {
+      margin-right: 20px; // Add some space between logo and nav links
+      font-size: 1.5rem; // Adjust logo size as needed
+      color: $dark-text-color; // Use variable for text color
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row; // Arrange links in a column
+    justify-content: space-around; // Spread space around links
+    width: 100%; // Take full width
+    
+    a {
+      text-decoration: none;
+      color: $dark-text-color; // Use variable for link color
+      transition: border-bottom 0.3s;
+
+      &.active {
+        border-bottom: 0px solid white; // Active link underline
+      }
+
+      &:hover {
+        color: $dark-primary-color; // Change color on hover
+      }
+    }
+  }
+}
