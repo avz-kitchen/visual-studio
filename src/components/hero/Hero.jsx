@@ -47,8 +47,8 @@ const Hero = () => {
           initial="initial"
           animate="animate"
         >
-          <motion.h2 variants={textVariants}>Welcome to</motion.h2>
-          <motion.h1 variants={textVariants}>AVZ Portfolio</motion.h1>
+          <motion.h2 variants={textVariants}>Whale,whale,whale</motion.h2>
+          <motion.h1 variants={textVariants}>Whats going on here</motion.h1>
           <motion.div variants={textVariants} className="buttons"></motion.div>
           <motion.img
             variants={textVariants}

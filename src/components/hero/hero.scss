@@ -2,17 +2,14 @@
 
 .hero {
   height: calc(100vh - 100px);
-  overflow: hidden;
-  background: $dark-background-color;
   position: relative;
 
   .wrapper {
     max-width: 1366px;
     height: 100%;
     margin: auto;
-
+padding: 0 120px;
     .textContainer {
-      padding: 0px 120px;
       width: 50%;
       height: 100%;
       display: flex;
@@ -29,13 +26,13 @@
       }
 
       h2 {
-        font-size: 30px;
+        font-size: 24px;
         color: $dark-primary-color;
         letter-spacing: 10px;
       }
 
       h1 {
-        font-size: 88px;
+        font-size: 80px;
 
         @include mobile {
           font-size: 36px;
