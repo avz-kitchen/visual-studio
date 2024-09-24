@@ -28,7 +28,6 @@ const App = () => {
         <section>
           <Services />
         </section>
-
         <section id="Contact">
           <Contact />
         </section>
