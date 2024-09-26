@@ -2,10 +2,10 @@
 
 .contact {
   height: 100%;
-  max-width: 1366px;
-  margin: auto;
+  width: 100vw;
+  margin: 0;
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 50px;
         padding: 0px 120px;
 
@@ -30,19 +30,22 @@
     }
 
     h1 {
-      font-size: 100px;
-      line-height: 88px;
+        font-size: 160px;
+        line-height: 80%;
 
       @include mobile {
         font-size: 36px;
       }
     }
 .subtext{
-  font-size: 80px;
+  font-size: 24px;
+
 }
     span {
       font-weight: 300;
+      font-size: 120px;
     }
+
   }
 
   .formContainer {
@@ -56,7 +59,7 @@
 
 
     .phoneSvg {
-      stroke: orange;
+      stroke: $dark-primary-color;
       position: absolute;
       margin: auto;
       z-index: -1;
@@ -71,7 +74,7 @@
       textarea {
         padding: 20px;
         background-color: transparent;
-        border: 1px solid white;
+        border: 1px solid $dark-primary-color;
         color: white;
         border-radius: 5px;
 
@@ -83,13 +86,18 @@
       button {
         padding: 20px;
         border: none;
-        background-color: orange;
+        background-color: $light-primary-color;
         cursor: pointer;
         font-weight: 500;
+
         @include mobile {
           padding: 10px;
         }
       }
     }
   }
+}
+.mail {
+  font-size: 100px;
+text-align: center;
 }

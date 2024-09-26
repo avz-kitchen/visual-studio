@@ -15,7 +15,7 @@ const items = [
     id: 2,
     title: "Leo.org",
     type: "Case Study",
-    img: "public/placeholder-267669.jpg",
+    img: "public/Untitled2.png",
     desc: "Was heisst das nochmal?",
     skill: "UX/UI",
   },
