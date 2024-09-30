@@ -1,4 +1,5 @@
 @import './variables';
+
 html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
@@ -12,57 +13,88 @@ html {
 }
 
 body {
-  background-color: $light-background-color;
-  color: $light-text-color;
-  
+  margin: 0;  /* Remove default margin */
+  height: 100vh; /* Ensure body takes full height */
+  overflow: auto; /* Allow scrolling if necessary */
 }
+
+.app-content {
+  padding-bottom: 60px; /* Add padding to prevent content from hiding under footer */
+}
+
+.navbar {
+  position: fixed; /* Keep navbar at the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.footer {
+  position: relative; /* Adjust based on your design */
+  bottom: 0; /* Position at the bottom */
+  left: 0;
+  width: 100%; /* Full width */
+  z-index: 10; /* Less than navbar */
+}
+
 
 a {
   text-decoration: none;
   color: inherit;
 }
+
 h1 {
   font-size: 120px;
-        line-height: 120%;
-
+  line-height: 120%;
 }
-h2{
+
+h2 {
   font-size: 64px;
 }
 
 section {
-  min-height: 80vh;
+  min-height: 100vh; // Full viewport height for each section
   max-width: 100vw;
-  scroll-snap-align: center;
-  overflow: hidden;
+  scroll-snap-align: start; // Ensure sections snap to the top
+  display: flex; // Flexbox for alignment
+  flex-direction: column; // Stack content vertically
+  align-items: center; // Center content horizontally
+  justify-content: center; // Center content vertically
+  overflow: hidden; // Prevent overflow issues
 }
 
 button {
   text-transform: uppercase;
   font-weight: 600;
-  :hover{
+
+  &:hover {
     font-weight: 400;
   }
 }
+
+// Media Queries
 @mixin mobile {
   @media (max-width: 738px) {
     @content;
     h1 {
-  font-size: 54px;
-}
-h2{
-  font-size: 54px;
-}
-p{
-  font-size: 16px;
-}
+      font-size: 54px;
+    }
+    h2 {
+      font-size: 54px;
+    }
+    p {
+      font-size: 16px;
+    }
   }
 }
+
 @mixin tablet {
   @media (max-width: 1024px) {
     @content;
   }
 }
+
 @mixin desktop {
   @media (max-width: 1366px) {
     @content;
