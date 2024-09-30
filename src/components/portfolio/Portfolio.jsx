@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import Featured from "./Featured";
-import Branding from "./Branding"; // Import the branding work component
-import portfolioItems from "../../data/portfolio"; // Portfolio data from external file
+import Branding from "./Branding";
+import portfolioItems from "../../data/portfolio";
 import "./portfolio.scss";
 
 const Portfolio = () => {
@@ -13,11 +13,10 @@ const Portfolio = () => {
   });
 
   const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
+    stiffness: 90,
+    damping: 10,
   });
 
-  // Filter portfolio items by type
   const featuredItems = portfolioItems.filter(
     (item) => item.type === "Case Study"
   );
@@ -25,20 +24,30 @@ const Portfolio = () => {
     (item) => item.type === "Branding"
   );
 
+  const scrollToNextSection = () => {
+    const nextSection = ref.current.nextElementSibling;
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleScroll = (e) => {
+    if (e.deltaY > 3) {
+      scrollToNextSection();
+    }
+  };
+
   return (
-    <div className="portfolio" ref={ref}>
-      {/* Progress bar for Featured Works */}
+    <div className="portfolio" ref={ref} onWheel={handleScroll}>
       <div className="progress">
-        <h1>Featured Works</h1>
+        <h1>Featured Projects</h1>
         <motion.div style={{ scaleX }} className="progressBar"></motion.div>
       </div>
 
-      {/* Featured Works */}
       {featuredItems.map((item) => (
         <Featured item={item} key={item.id} />
       ))}
 
-      {/* Branding Section */}
       <div className="branding-section">
         <h1>Branding Projects</h1>
         <p>Some short description of the branding projects goes here.</p>
