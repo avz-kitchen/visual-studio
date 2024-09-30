@@ -1,13 +1,13 @@
-import Portfolio from "../components/portfolio/Portfolio";
 import Parallax from "../components/parallax/Parallax";
-import Logo from "../components/project/Logo";
+import ProjectCard from "../components/project/ProjectCard";
+import portfolioItems from "./../data/portfolio"; // Import portfolioItems data
 
 const PortfolioPage = () => {
   return (
     <section id="Portfolio">
-      <Portfolio />
-      <Parallax type="portfolio" />
-      <Logo />
+      {portfolioItems.map((item) => (
+        <ProjectCard portfolioItem={item} key={item.id} /> // Pass each project as a prop
+      ))}
     </section>
   );
 };

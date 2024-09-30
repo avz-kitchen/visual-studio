@@ -6,6 +6,9 @@ const portfolioItems = [
         img: "public/Untitled1.png",
         desc: "Lorem ipsum dolor sit",
         skill: "UX/UI",
+        isFeatured: true, // Featured item
+
+
     },
     {
         id: 2,
@@ -14,6 +17,8 @@ const portfolioItems = [
         img: "public/Untitled2.png",
         desc: "Was heisst das nochmal?",
         skill: "UX/UI",
+        isFeatured: true,
+
     },
     {
         id: 3,
@@ -22,6 +27,8 @@ const portfolioItems = [
         img: "public/placeholder1.png",
         desc: "Lorem ipsum dolor sit",
         skill: "Digital Experience",
+        isFeatured: false,
+
     },
     {
         id: 4,
@@ -30,22 +37,28 @@ const portfolioItems = [
         img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         desc: "Lorem ipsum dolor sit",
         skill: "UX",
+        isFeatured: false,
+
     },
     {
         id: 5,
-        title: "Branding Project 1",
+        title: "Madam Do",
         type: "Branding",
         img: "public/avz-logo-s.png",
         desc: "Branding project description",
         skill: "Branding",
+        isFeatured: true,
+
     },
     {
         id: 6,
-        title: "Branding Project 2",
+        title: "Philip Kehela",
         type: "Branding",
         img: "public/avz-logo-s.png",
         desc: "Branding project description",
         skill: "Branding",
+        isFeatured: true,
+
     },
 ];
 

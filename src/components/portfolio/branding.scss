@@ -1,0 +1,11 @@
+@import '../../variables';
+@import "../../app.scss";
+
+.branding-card {
+          border: 1px solid $light-primary-color;
+          padding: 20px;
+          a :hover {
+            text-decoration: underline;
+            color: $dark-primary-color;
+          }
+}

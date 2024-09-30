@@ -4,7 +4,6 @@
 .portfolio {
   position: relative;
   background-color: $light-background-color;
-height: 60;
   .progress {
     position: sticky;
     text-align: left;
@@ -24,19 +23,18 @@ height: 60;
 
   .container {
     display: flex;
-    justify-content: start;
     width: 100vw;
     height: 100vh; // Use vh for full viewport height
     overflow: hidden;
     margin-top: 10px;
-
+padding-right: 120px;
     .wrapper {
-      max-width: 100%;
-      height: 88%; // Allows children to take full height
+      min-width: 100%;
+      height: 100%; // Allows children to take full height
       margin: 0;
       display: flex;
       gap: 24px;
-        justify-items: flex-start;
+      justify-items: flex-start;
 
       @include mobile {
         flex-direction: column;
@@ -135,9 +133,24 @@ height: 60;
 }
 .branding {
   padding: 54px 120px;
+        button {
+        width: 100%;
+        height: 100px;
+        border-radius: 50px;
+        background-color:$light-primary-color;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+
+        @include mobile {
+          font-size: 16px;
+          width: 150px;
+          height: 50px;
+        }
+      }
   .branding-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr; // Three equal columns
+    grid-template-columns: 1fr  1fr; // Three equal columns
     gap: 20px; // Adjust the gap as needed
 
     .grid-item {
@@ -156,10 +169,10 @@ height: 60;
     .project-preview {
       display: flex;
       flex-direction: row;
-      gap: 20px; // Gap between cards
+      gap: 0px; // Gap between cards
       grid-column: span 1; // Each preview column spans one column
       img{
-        width: 420px;
+        width: 320px;
       }
     }
   }
@@ -167,20 +180,19 @@ height: 60;
   .branding-bottom-grid {
     display: flex;
     justify-content: space-between;
-    align-items: end;
-    margin-top: 20px;
+    align-items: center;
 
     .logo-large {
       flex: 2; // Take 2/3 of the space
       img {
-        width: 420px; // Ensure the logo takes full width
-        height: auto; // Maintain aspect ratio
+        width: auto; // Ensure the logo takes full width
+        height: 240px; // Maintain aspect ratio
       }
     }
 
     .text-link {
       flex: 1; // Take 1/3 of the space
-      text-align: center;
+      text-align: left;
 
       h2 {
         margin-bottom: 10px;
@@ -191,5 +203,6 @@ height: 60;
         color: $light-primary-color; // Change to your desired link color
       }
     }
+    
   }
 }

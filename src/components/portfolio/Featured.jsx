@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import "./featured.scss"; // Ensure to add styling for this component
+import { Link } from "react-router-dom";
 
 const Featured = ({ item }) => {
   const ref = useRef();
@@ -21,7 +22,9 @@ const Featured = ({ item }) => {
           </div>
           <motion.div className="textContainer" style={{ y }}>
             <p>{item.desc}</p>
-            <button>See {item.type}</button>
+            <Link to={`/projects/${item.id}`}>
+              <button>Read {item.type}</button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>

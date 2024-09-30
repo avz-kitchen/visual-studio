@@ -13,7 +13,7 @@ const HomePage = () => {
       </section>
 
       <section id="Portfolio">
-        <Portfolio />
+        <Portfolio isHomepage={true} />
       </section>
 
       <section id="SeeMore">

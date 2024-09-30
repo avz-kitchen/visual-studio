@@ -36,8 +36,8 @@ const Services = () => {
     >
       <motion.div className="textContainer" variants={variants}>
         <p>
-          I focus on helping your brand grow
-          <br /> from Logo to Branding
+          Together we grow:
+          <br /> From branding to digital presence
         </p>
         <hr />
       </motion.div>
@@ -45,16 +45,18 @@ const Services = () => {
         <div className="title">
           <img src="/people.webp" alt="" />
           <h1>
-            <motion.b whileHover={{ color: "orange" }}>Together</motion.b> we
-            turn Ideas to
+            Hello , I'm
+            <motion.b whileHover={{ color: "orange" }}>
+              Ang Valenzuela{" "}
+            </motion.b>
           </h1>
         </div>
         <div className="title">
           <h1>
-            <motion.b whileHover={{ color: "orange" }}>Emotional</motion.b>{" "}
+            <motion.b whileHover={{ color: "orange" }}>crafting</motion.b>{" "}
             resonance.
           </h1>
-          <button>About AVZ </button>
+          <button>About Me </button>
         </div>
       </motion.div>
       <motion.div className="listContainer" variants={variants}>
@@ -62,7 +64,7 @@ const Services = () => {
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2> From Design</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
             libero enim nisi aliquam consectetur expedita magni eius ex corrupti
@@ -75,7 +77,7 @@ const Services = () => {
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>UX/UI Design</h2>
+          <h2>Illustration</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
             libero enim nisi aliquam consectetur expedita magni eius ex corrupti
@@ -88,7 +90,7 @@ const Services = () => {
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Development</h2>
+          <h2>To coding</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
             libero enim nisi aliquam consectetur expedita magni eius ex corrupti

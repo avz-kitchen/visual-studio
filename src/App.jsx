@@ -9,6 +9,7 @@ import HomePage from "./pages/HomePage";
 import PortfolioPage from "./pages/PortfolioPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
+import ProjectDetails from "./pages/ProjectDetails"; // Import the dynamic Project Details page
 
 const App = () => {
   return (
@@ -17,14 +18,14 @@ const App = () => {
       <Navbar />
 
       <div className="app-content">
-        {" "}
-        {/* Wrap main content for better styling control */}
         {/* Define Routes */}
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          {/* Dynamic route for individual projects */}
+          <Route path="/portfolio/:projectId" element={<ProjectDetails />} />
         </Routes>
       </div>
 
