@@ -17,16 +17,16 @@ const Navbar = () => {
           AVZ
         </motion.span>
         <nav className="nav-links">
-          <NavLink to="#Homepage" activeClassName="active" className="textUc">
+          <NavLink to="/" activeClassName="active" className="textUc">
             Visual Studio
           </NavLink>
-          <NavLink to="#Portfolio" activeClassName="active">
+          <NavLink to="/Portfolio" activeClassName="active">
             Portfolio
           </NavLink>
-          <NavLink to="#About" activeClassName="active">
+          <NavLink to="/About" activeClassName="active">
             About
           </NavLink>
-          <NavLink to="#Contact" activeClassName="active">
+          <NavLink to="/Contact" activeClassName="active">
             Contact
           </NavLink>
         </nav>
