@@ -3,6 +3,7 @@
 html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  
 }
 
 * {
@@ -13,29 +14,32 @@ html {
 }
 
 body {
-  margin: 0;  /* Remove default margin */
-  height: 100vh; /* Ensure body takes full height */
-  overflow: auto; /* Allow scrolling if necessary */
+  margin: 0;  
+  height: 100vh; 
+  overflow: auto; 
+  background-color: $light-background-color;
 }
 
 .app-content {
-  padding-bottom: 60px; /* Add padding to prevent content from hiding under footer */
+  padding-bottom: 60px;
 }
 
 .navbar {
-  position: fixed; /* Keep navbar at the top */
+    background-color: $light-background-color;
+
+  position: fixed; 
   top: 0;
   left: 0;
-  width: 100%; /* Full width */
-  z-index: 1000; /* Ensure it's above other content */
+  width: 100%; 
+  z-index: 1000; 
 }
 
 .footer {
-  position: relative; /* Adjust based on your design */
-  bottom: 0; /* Position at the bottom */
+  position: relative; 
+  bottom: 0; 
   left: 0;
-  width: 100%; /* Full width */
-  z-index: 10; /* Less than navbar */
+  width: 100%; 
+  z-index: 10;
 }
 
 
@@ -54,14 +58,14 @@ h2 {
 }
 
 section {
-  min-height: 100vh; // Full viewport height for each section
+  min-height: 100vh; 
   max-width: 100vw;
-  scroll-snap-align: start; // Ensure sections snap to the top
-  display: flex; // Flexbox for alignment
-  flex-direction: column; // Stack content vertically
-  align-items: center; // Center content horizontally
-  justify-content: center; // Center content vertically
-  overflow: hidden; // Prevent overflow issues
+  scroll-snap-align: start; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 button {
