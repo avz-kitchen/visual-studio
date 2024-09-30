@@ -31,11 +31,12 @@ height: 60;
     margin-top: 10px;
 
     .wrapper {
-      max-width: 100vw;
+      max-width: 100%;
       height: 88%; // Allows children to take full height
       margin: 0;
       display: flex;
       gap: 24px;
+        justify-items: flex-start;
 
       @include mobile {
         flex-direction: column;
@@ -48,7 +49,6 @@ height: 60;
         flex: 8;
         height: 54%;
         padding-top: 54px;
-
         @include mobile {
           width: 100%;
           max-height: 300px;
@@ -93,10 +93,8 @@ height: 60;
         display: flex;
         flex-direction: column;
         gap: 20px;
-        align-items: end;
+        align-items: flex-end;
         justify-content: end;
-        padding-right: 120px;
-        padding-bottom: 0px;
 
         @include mobile {
           padding: 10px;
@@ -131,6 +129,66 @@ height: 60;
             background-color: darken($light-primary-color, 10%); // Add hover effect
           }
         }
+      }
+    }
+  }
+}
+.branding {
+  padding: 54px 120px;
+  .branding-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr; // Three equal columns
+    gap: 20px; // Adjust the gap as needed
+
+    .grid-item {
+      padding: 20px;
+      background-color: $light-background-color; // Change background color as needed
+      border-radius: 10px;
+    }
+
+    .grid-info {
+      grid-column: span 1; // Span the first column
+      h1 {
+        margin-bottom: 10px;
+      }
+    }
+
+    .project-preview {
+      display: flex;
+      flex-direction: row;
+      gap: 20px; // Gap between cards
+      grid-column: span 1; // Each preview column spans one column
+      img{
+        width: 420px;
+      }
+    }
+  }
+
+  .branding-bottom-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 20px;
+
+    .logo-large {
+      flex: 2; // Take 2/3 of the space
+      img {
+        width: 420px; // Ensure the logo takes full width
+        height: auto; // Maintain aspect ratio
+      }
+    }
+
+    .text-link {
+      flex: 1; // Take 1/3 of the space
+      text-align: center;
+
+      h2 {
+        margin-bottom: 10px;
+      }
+
+      a {
+        text-decoration: underline;
+        color: $light-primary-color; // Change to your desired link color
       }
     }
   }
