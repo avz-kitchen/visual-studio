@@ -2,8 +2,10 @@ import { useParams } from "react-router-dom";
 import portfolioItems from "./../data/portfolio";
 
 const ProjectDetails = () => {
-  const { projectId } = useParams(); // Get the dynamic projectId from the route
-  const project = portfolioItems.find((item) => item.id === projectId); // Find the project data based on ID
+  const { projectId } = useParams();
+
+  // Convert projectId to a number for comparison
+  const project = portfolioItems.find((item) => item.id === Number(projectId));
 
   if (!project) {
     return <h2>Project not found</h2>;

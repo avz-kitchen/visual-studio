@@ -15,6 +15,7 @@ const App = () => {
   return (
     <Router>
       <Cursor />
+
       <div className="app-content">
         <Navbar />
         <main>
