@@ -4,46 +4,73 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  padding: 0px 120px;
-  height: 70px; /* Set a fixed height for the navbar */
+  padding: 54px 120px;
+  height: 70px;
   display: flex;
   align-items: center;
-  justify-content: space-between;.logo {
-  font-size: 64px;
-font-weight: 800;}
+  justify-content: space-between;
+
+  .logo {
+    font-size: 64px;
+    font-weight: 800;
+    color: $dark-primary-color;
+background-color: $light-primary-color;
+border-radius: 120px;
+  }
 
   .wrapper {
     display: flex;
     align-items: center;
     width: 100%;
-    .textUc{
-      text-transform: uppercase;
-    }
-    motion.span {
-      margin-right: 20px; 
-      font-size: 1.5rem; 
-      color: $light-text-color; 
+    justify-content: space-between;
+
+    .nav-links {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); /* 4 equal columns */
+      gap: 20px; /* Space between grid items */
+      width: 100%;
+      text-align: center;
+      align-items: center; 
+
+ 
+      a {
+        display: flex; 
+        justify-content: start; 
+        align-items: center; 
+        text-decoration: none;
+        color: #030303;
+        font-size: 18px;
+        height: 70px; 
+        transition: border-bottom 0.3s;
+
+        &.active {
+          text-decoration: underline; 
+          text-underline-offset: 8px;
+          font-weight: 800;
+          color: $dark-primary-color;
+        }
+
+        &:hover {
+          color: $dark-primary-color;
+        }
+      }
     }
   }
+}
 
-  .nav-links {
-    display: flex;
-    flex-direction: row; // Arrange links in a column
-    justify-content: space-around; // Spread space around links
-    width: 100%; // Take full width
-    font-size: 18px;
-    a {
-      text-decoration: none;
-      color: $dark-primary-color; // Use variable for link color
-      transition: border-bottom 0.3s;
+// Responsive adjustments
+@media (max-width: 768px) {
+  .wrapper {
+    .nav-links {
+      grid-template-columns: repeat(2, 1fr); 
+  }
+}
 
-      &.active {
-        border-bottom: 0px solid white; // Active link underline
-      }
-
-      &:hover {
-        color: $dark-primary-color; // Change color on hover
-      }
+@media (max-width: 480px) {
+  .wrapper {
+    .nav-links {
+      grid-template-columns: 1fr; 
     }
   }
+}
 }

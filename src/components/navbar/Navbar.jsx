@@ -8,15 +8,15 @@ const Navbar = () => {
     <div className="navbar">
       <Sidebar />
       <div className="wrapper">
-        <motion.span
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="logo"
-        >
-          AVZ
-        </motion.span>
         <nav className="nav-links">
+          <motion.span
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="logo"
+          >
+            AVZ
+          </motion.span>
           <NavLink
             to="/"
             className={({ isActive }) => (isActive ? "active" : "textUc")}
