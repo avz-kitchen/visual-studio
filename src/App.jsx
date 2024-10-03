@@ -15,21 +15,19 @@ const App = () => {
   return (
     <Router>
       <Cursor />
-      <Navbar />
-
       <div className="app-content">
-        {/* Define Routes */}
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/portfolio" element={<PortfolioPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          {/* Dynamic route for individual projects */}
-          <Route path="/portfolio/:projectId" element={<ProjectDetails />} />
-        </Routes>
+        <Navbar />
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/portfolio" element={<PortfolioPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/portfolio/:projectId" element={<ProjectDetails />} />
+          </Routes>
+        </main>
+        <Footer />
       </div>
-
-      <Footer />
     </Router>
   );
 };

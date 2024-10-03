@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import "./parallax.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
 
@@ -25,7 +26,16 @@ const Parallax = ({ type }) => {
       }}
     >
       <motion.h1 style={{ y: yText }}>
-        {type === "services" ? "What's cooking?" : "See More"}
+        {type === "services" ? (
+          "What's cooking?"
+        ) : (
+          <Link
+            to="/portfolio"
+            style={{ color: "inherit", textDecoration: "none" }}
+          >
+            See More
+          </Link>
+        )}{" "}
       </motion.h1>
       {/*  <motion.div className="mountains"></motion.div> */}
       <motion.div

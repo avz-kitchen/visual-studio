@@ -22,7 +22,7 @@ const Featured = ({ item }) => {
           </div>
           <motion.div className="textContainer" style={{ y }}>
             <p>{item.desc}</p>
-            <Link to={`/projects/${item.id}`}>
+            <Link to={`/portfolio/${item.id}`}>
               <button>Read {item.type}</button>
             </Link>
           </motion.div>

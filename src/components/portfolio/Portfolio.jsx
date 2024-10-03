@@ -42,7 +42,7 @@ const Portfolio = ({ isHomepage }) => {
     <>
       <div className="portfolio" ref={ref} onWheel={handleScroll}>
         <div className="progress">
-          <h1>{isHomepage ? "Featured Work" : "Projects"}</h1>
+          <h1>{isHomepage ? "Featured Projects" : "Projects"}</h1>
           <motion.div style={{ scaleX }} className="progressBar"></motion.div>
         </div>
 

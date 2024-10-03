@@ -9,7 +9,6 @@ const AboutPage = () => {
       <AboutInfo />
 
       {/* Parallax effect for transition */}
-      <Parallax type="about" />
 
       {/* Services Information */}
       <Services />

@@ -1,15 +1,17 @@
 @import "../../variables";
 
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0px 120px;
+  height: 70px; /* Set a fixed height for the navbar */
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start; // Align items to the left
-  min-width: 303px; // Minimum width for the logo
-  padding: 0px 120px; // Add padding for aesthetics
-.logo {
+  align-items: center;
+  justify-content: space-between;.logo {
   font-size: 64px;
 font-weight: 800;}
+
   .wrapper {
     display: flex;
     align-items: center;

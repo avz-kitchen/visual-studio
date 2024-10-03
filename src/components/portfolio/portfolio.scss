@@ -109,7 +109,7 @@ padding-right: 120px;
 
         p {
           font-size: 32px;
-
+text-align: right;
           @include mobile {
             padding-top: 120px;
             font-size: 54px;
@@ -204,5 +204,19 @@ padding-right: 120px;
       }
     }
     
+  }
+}
+.project-grid {
+  display: grid; // Use CSS Grid
+  grid-template-columns: repeat(3, 1fr); // Three equal columns
+  gap: 0px; // Space between the grid items
+padding: 0 120px;
+  // Ensure responsiveness
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr); // Two columns for medium screens
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr; // One column for mobile screens
   }
 }

@@ -67,7 +67,7 @@ const Hero = () => {
         Branding UX UI Dev
       </motion.div>
       <div className="imageContainer">
-        <img src="/hero.png" alt="" />
+        <img src="/avz-logo-s.png" alt="" />
       </div>
     </div>
   );

@@ -3,7 +3,6 @@ import Portfolio from "../components/portfolio/Portfolio";
 import Parallax from "../components/parallax/Parallax";
 import Services from "../components/services/Services";
 import Contact from "../components/contact/Contact";
-import Footer from "../components/footer/Footer";
 
 const HomePage = () => {
   return (
@@ -27,8 +26,6 @@ const HomePage = () => {
       <section id="Contact">
         <Contact />
       </section>
-
-      <Footer />
     </div>
   );
 };
