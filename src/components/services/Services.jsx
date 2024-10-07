@@ -34,32 +34,27 @@ const Services = () => {
       ref={ref}
       animate={"animate"}
     >
-      <motion.div className="textContainer" variants={variants}>
-        <p>
-          Together we grow:
-          <br /> From branding to digital presence
-        </p>
-        <hr />
-      </motion.div>
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
           <img src="/people.webp" alt="" />
           <h1>
             Hello , I'm
-            <motion.b whileHover={{ color: "orange" }}>
-              Ang Valenzuela{" "}
-            </motion.b>
+            <motion.b whileHover={{ color: "orange" }}>Ang Valenzuela</motion.b>
           </h1>
         </div>
         <div className="title">
           <h1>
-            <motion.b whileHover={{ color: "orange" }}>crafting</motion.b>{" "}
-            resonance.
+            a {"<"}{" "}
+            <motion.b whileHover={{ color: "orange" }}>Designer</motion.b>
+            {">"}
           </h1>
-          <button>About Me </button>
+          <div>
+            <img src="" />
+            <button>About Me </button>
+          </div>
         </div>
       </motion.div>
-      <motion.div className="listContainer" variants={variants}>
+      {/*<motion.div className="listContainer" variants={variants}>
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
@@ -99,7 +94,7 @@ const Services = () => {
           </p>
           <button>Go</button>
         </motion.div>
-      </motion.div>
+      </motion.div> */}
     </motion.div>
   );
 };

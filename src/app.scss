@@ -18,6 +18,7 @@ body {
   height: 100vh; 
   overflow: auto; 
   background-color: $light-background-color;
+  color: $light-text-color;
 }
 
 a {
@@ -43,6 +44,7 @@ section {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  
 }
 
 button {
@@ -52,6 +54,9 @@ button {
   &:hover {
     font-weight: 400;
   }
+}
+.page-title{
+  height: 72vh;
 }
 
 // Media Queries

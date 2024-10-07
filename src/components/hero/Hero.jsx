@@ -47,8 +47,10 @@ const Hero = () => {
           initial="initial"
           animate="animate"
         >
-          <motion.h2 variants={textVariants}>Whale,whale,whale</motion.h2>
-          <motion.h1 variants={textVariants}>Whats going on here</motion.h1>
+          <motion.h1 variants={textVariants}>
+            Bit of pictograms, design <br />
+            and code ...
+          </motion.h1>
           <motion.div variants={textVariants} className="buttons"></motion.div>
           <motion.img
             variants={textVariants}
@@ -58,14 +60,7 @@ const Hero = () => {
           />
         </motion.div>
       </div>
-      <motion.div
-        className="slidingTextContainer"
-        variants={sliderVariants}
-        initial="initial"
-        animate="animate"
-      >
-        Branding UX UI Dev
-      </motion.div>
+
       <div className="imageContainer">
         <img src="/avz-logo-s.png" alt="" />
       </div>
