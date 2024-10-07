@@ -5,7 +5,6 @@ const ProjectCard = ({ projectItem }) => {
   return (
     <div className="project-card">
       <div className="project-details">
-        <h2>{projectItem.title || "Untitled Project"}</h2>
         <div className="image-wrapper">
           <img
             src={projectItem.img || "default-image.jpg"} // Fallback image
@@ -13,7 +12,10 @@ const ProjectCard = ({ projectItem }) => {
             loading="lazy"
           />
         </div>
-        <p>{projectItem.desc || "No description available."}</p>
+        <span>
+          {projectItem.month} / {projectItem.year}
+        </span>
+        <h2>{projectItem.title || "Untitled Project"}</h2>
         <Link to={`/portfolio/${projectItem.id}`}>
           <button>View Project</button>
         </Link>
